@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Bot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-box">
+            <!-- チャットメッセージを表示するエリア -->
+        </div>
+    </div>
+    <form id="chatForm">        
+        <textarea id="userInput" placeholder="Say something..." rows="4" cols="50" style="height: 66px;"></textarea>
+
+        <!-- ドラッグアンドドロップ領域 -->
+        <div id="dropArea" class="drop-area-icon">
+            <i class="fas fa-cloud-upload-alt"></i>
+        </div>
+        
+        <!-- ファイル選択アイコン -->
+        <label for="fileInput" class="file-input-icon">
+            <i class="fas fa-upload"></i>
+        </label>
+        <input type="file" id="fileInput" style="display: none;" />
+
+
+        <button type="submit" id="sendButton">Send</button>
+    </form>
+    <!-- Reporチェックボックスの追加 -->
+    <div style="display: none;">
+        <input type="checkbox" id="repor" name="repor" value="true"> Check<br>
+    </div>
+    
+    <!-- ファイル情報表示用の要素 -->
+    <div id="fileInfo" class="file-info"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

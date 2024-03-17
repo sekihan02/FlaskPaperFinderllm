@@ -1,0 +1,3 @@
+@REM dockerを止める時
+docker stop flask_summary_literature_review
+docker rm flask_summary_literature_review
